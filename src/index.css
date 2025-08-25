@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Smooth scroll + selection */
+html {
+  scroll-behavior: smooth;
+}
+::selection {
+  background: rgba(34, 197, 94, 0.25);
+}
+
+/* Section container */
+.section {
+  @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Glassy card */
+.card {
+  @apply rounded-2xl shadow-lg border border-white/10 bg-white/5 backdrop-blur-md;
+}
+
+/* Gradient text helper */
+.gradient-text {
+  background: linear-gradient(90deg, #22c55e, #06b6d4 60%, #a78bfa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Hide the default scrollbar on webkit, keep scroll functional */
+/* stylelint-disable-next-line */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+/* stylelint-disable-next-line */
+::-webkit-scrollbar-thumb { background: rgba(148,163,184,.4); border-radius: 9999px; }
+
