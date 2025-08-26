@@ -18,7 +18,7 @@ export default function Navbar() {
     <nav className="fixed top-0 inset-x-0 z-40 backdrop-blur-xl bg-slate-950/40 border-b border-white/10">
       <div className="section flex items-center justify-between py-3">
         <a href="#" className="font-bold text-white text-lg">
-          <span className="gradient-text">Ayaan.dev</span>
+          <span className="gradient-text">Ayaan</span>
         </a>
 
         <div className="hidden md:flex items-center gap-6">

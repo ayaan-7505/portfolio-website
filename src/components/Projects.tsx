@@ -4,6 +4,7 @@ export interface Project {
   title: string;
   description: string;
   github: string;
+  demo?: string;
 }
 
 export default function Projects({ items }: { items: Project[] }) {
@@ -12,11 +13,8 @@ export default function Projects({ items }: { items: Project[] }) {
       <h3 className="text-2xl font-bold text-white">Projects</h3>
       <div className="mt-6 grid md:grid-cols-3 sm:grid-cols-2 gap-6">
         {items.map((p, i) => (
-          <motion.a
+          <motion.div
             key={p.title}
-            href={p.github}
-            target="_blank"
-            rel="noreferrer"
             initial={{ y: 10, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
@@ -25,8 +23,27 @@ export default function Projects({ items }: { items: Project[] }) {
           >
             <h4 className="text-lg font-semibold text-white">{p.title}</h4>
             <p className="text-slate-300 mt-2">{p.description}</p>
-            <p className="mt-4 text-teal-300 underline">View on GitHub →</p>
-          </motion.a>
+            <div className="mt-4 flex gap-4">
+              <a
+                href={p.github}
+                target="_blank"
+                rel="noreferrer"
+                className="text-teal-300 hover:text-teal-400 transition-colors underline"
+              >
+                GitHub →
+              </a>
+              {p.demo && (
+                <a
+                  href={p.demo}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-green-400 hover:text-green-500 transition-colors underline"
+                >
+                  Live Demo →
+                </a>
+              )}
+            </div>
+          </motion.div>
         ))}
       </div>
     </section>

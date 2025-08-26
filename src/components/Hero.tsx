@@ -9,6 +9,7 @@ interface HeroProps {
     linkedin: string;
     leetcode: string;
     gfg: string;
+    resume?: string; // Add this line
   };
 }
 
@@ -56,6 +57,16 @@ export default function Hero({ name, role, summary, links }: HeroProps) {
             >
               View Projects
             </a>
+            {links.resume && (
+              <a
+                href={links.resume}
+                target="_blank"
+                rel="noreferrer"
+                className="px-5 py-3 rounded-xl bg-teal-500 text-slate-900 font-semibold hover:brightness-95"
+              >
+                View Resume
+              </a>
+            )}
             <a
               href={links.github}
               target="_blank"

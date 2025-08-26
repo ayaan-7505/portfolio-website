@@ -75,12 +75,14 @@ const resume = {
       description:
         "Broker-free real estate platform built with MERN, Firebase, and JWT token. Owners list estates for rent/sale, users acquire listings directly.",
       github: "https://github.com/ayaan-7505/MyRenter",
+      demo: "https://myrenter.onrender.com/",
     },
     {
       title: "Realtime Chat App",
       description:
         "Real-time chat app (MERN) with JWT auth, Daisy-UI, Zustand for state, and Socket.io for messaging.",
       github: "https://github.com/ayaan-7505/chat-app",
+      demo: "https://realtime-chat-app-ujjr.onrender.com/",
     },
     {
       title: "Snake Game",
@@ -125,6 +127,7 @@ export default function App() {
               linkedin: resume.contact.linkedin,
               leetcode: resume.contact.leetcode!,
               gfg: resume.contact.gfg!,
+              resume: "https://drive.google.com/file/d/1Kqea7xHkbUAkFAsh7z3m9KTBmDquOHuO/view?usp=sharing",
             }}
           />
           <About summary={resume.summary} />
